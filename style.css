@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #F3E5AB;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height:100%;
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1 1 200px; /* Flex basis minimum 200px */
+    max-width: calc(33.333% - 20px); /* Maksimal 3 kartu per baris */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #ADD8E6; /* Warna latar belakang biru muda */
+    position: relative;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h2, .card p {
+    margin: 5px 0;
+}
+
+.card input[type="checkbox"] {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.back-btn, .pembanding-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pembanding-btn:disabled {
+    background-color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        max-width: calc(50% - 20px); /* Dua kolom per baris */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: calc(100% - 20px); /* Satu kolom per baris */
+    }
+}
+
+.pembanding-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+.pembanding-btn:disabled {
+    background-color: #ccc;
+}
+
